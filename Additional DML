@@ -1,0 +1,72 @@
+-- Inserting data into Suppliers
+INSERT INTO Suppliers (SupplierName, ContactName, Address, City, PostalCode,
+Country, Phone) VALUES
+('Business First', 'Rocio Avila', '2923 Lakewood Avenue', 'Rockwood', 'SL564',
+'El Salvador', '887-345-2232'),
+('All Goods', 'Andrea Vasquez', '342 Lemon Street', 'And City', 'IL098',
+'Iceland', '562-104-2333'),
+('Half Foods', 'Elijah Guerrero', '1289 Firewood Way', 'Aurorvale', 'ID322',
+'Indonesia', '310-335-6755'),
+('Wellmart', 'Carson LeSage', '213 Rain Avenue', 'Veridian Reach', 'FL991',
+'Finland', '561-045-9597'),
+('Nature Enterprises', 'Magic Johnson', '567 Pine Street', 'Sustainaville', 'SV890',
+'Slovania', '456-789-0123'),
+('Renewable Horizons Inc.', 'Jessica Clark', '678 Birch Avenue', 'Green Haven', 'GH789',
+'England', '567-890-1234'),
+('EarthWise Enterprises', 'Sarah Brown', '101 Yellow Lane', 'GreenVista', 'GV101',
+'EcoLandia', '222-333-4444'),
+('EcoHarmony Innovations', 'Liam Taylor', '901 Willow Street', 'EcoMeadow', 'EM234',
+'Greenfield', '234-567-8901');
+-- Inserting data into Products
+INSERT INTO Products (ProductName, SupplierID, Category, UnitPrice, UnitsInStock)
+VALUES
+('Recycled Notebook', 3, 'Stationery', 4.75, 80),
+('Solar-Powered Lantern', 4, 'Outdoor', 19.99, 120),
+('Food Containers', 5, 'Kitchen', 12.49, 180),
+('Fair Trade Coffee', 6, 'Beverages', 8.99, 250),
+('Recycled Plastic Backpack', 7, 'Accessories', 29.99, 90),
+('Natural Wood Cutting Board', 8, 'Kitchen', 18.75, 110),
+('Biodegradable Straws', 9, 'Kitchen', 3.49, 300);
+
+INSERT INTO Products (ProductName, SupplierID, Category, UnitPrice, UnitsInStock)
+VALUES
+('Pillow', 7, 'Accessories', 4.50, 0);
+
+-- Inserting data into Customers
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode,
+Country) VALUES
+('Sustainable Living Co.', 'Sarah Miller', '456 Sustainability Blvd', 'Greenview', 'GV456', 'EcoNation'),
+('Natural Choice Emporium', 'David Wilson', '123 Earthy Lane', 'EcoCity', 'EC123', 'EcoTopia'),
+('EcoConscious Goods', 'Emma Davis', '567 Renewable Road', 'EcoValley', 'EV567', 'Greenlands'),
+('Green Living Supplies', 'Oliver Thompson', '789 Leafy Lane', 'Sustainaville', 'SV789', 'EcoFields'),
+('EcoFriendly Finds', 'Sophie Garcia', '234 Eco Avenue', 'Greenburgh', 'GB234', 'EcoNation'),
+('Earthly Delights Emporium', 'Liam Wilson', '901 Greenway', 'EcoCentral', 'EC901', 'Sustainia'),
+('Renewable Living Co.', 'Mia Johnson', '567 Recycle Road', 'EcoVista', 'EV567', 'Greenlandia'),
+('EcoEssentials Market', 'Ava Lee', '345 Eco Terrace', 'SustainCity', 'SC345', 'EcoHaven');
+
+
+-- Inserting data into Orders
+INSERT INTO Orders (CustomerID, OrderDate, ShipDate, ShipAddress, ShipCity,
+ShipPostalCode, ShipCountry) VALUES
+(3, '2023-11-07', '2023-11-12', '456 Sustainability Blvd', 'Greenview', 'GV456', 'EcoNation'),
+(4, '2023-11-10', '2023-11-15', '123 Earthy Lane', 'EcoCity', 'EC123', 'EcoTopia'),
+(5, '2023-11-15', '2023-11-20', '567 Renewable Road', 'EcoValley', 'EV567', 'Greenlands'),
+(6, '2023-11-18', '2023-11-23', '789 Leafy Lane', 'Sustainaville', 'SV789', 'EcoFields'),
+(7, '2023-11-21', '2023-11-26', '234 Eco Avenue', 'Greenburgh', 'GB234', 'EcoNation'),
+(8, '2023-11-24', '2023-11-29', '901 Greenway', 'EcoCentral', 'EC901', 'Sustainia'),
+(9, '2023-11-28', '2023-12-03', '567 Recycle Road', 'EcoVista', 'EV567', 'Greenlandia'),
+(10, '2023-12-01', '2023-12-06', '345 Eco Terrace', 'SustainCity', 'SC345', 'EcoHaven');
+
+-- Inserting data into OrderDetails
+INSERT INTO OrderDetails (OrderID, ProductID, Quantity, UnitPrice) VALUES
+(2, 4, 3, 4.75),
+(2, 4, 3, 4.75),
+(3, 5, 2, 19.99),
+(3, 6, 4, 12.49),
+(4, 7, 1, 8.99),
+(5, 8, 2, 29.99),
+(6, 9, 3, 18.75),
+(7, 10, 5, 3.49);
+
+INSERT INTO OrderDetails (OrderID, ProductID, Quantity, UnitPrice) VALUES
+(6, 5, 3, 19.99);
