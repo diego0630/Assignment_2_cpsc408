@@ -1,3 +1,4 @@
+ProductID,ProductName,SupplierID,Category,UnitPrice,UnitsInStock
 1,Bamboo Toothbrush,1,Personal Care,2.99,100
 2,Reusable Water Bottle,1,Outdoor,10.50,200
 3,Organic Cotton T-shirt,2,Clothing,15.99,150
