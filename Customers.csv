@@ -1,3 +1,4 @@
+CustomerID,CustomerName, ContactName,Address,City,PostalCode,Country
 1,Eco Shopper,Alice Johnson,789 Eco Ave,EcoTown,ET789,EcoCountry
 2,Green Buyer,Bob Brown,321 Green St,EcoVille,EV321,EcoLand
 3,Sustainable Living Co.,Sarah Miller,456 Sustainability Blvd,Greenview,GV456,EcoNation
